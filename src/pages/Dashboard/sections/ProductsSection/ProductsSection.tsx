@@ -1,23 +1,18 @@
-import React from "react";
+
+
 import { AnimatedCard } from "../../../../components/ui/animated-card";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "../../../../components/ui/avatar";
 import { CardContent } from "../../../../components/ui/card";
-import { ProgressBar } from "../../../../components/ui/progress-bar";
 
 const teamMembers = [
   {
     name: "John Carter",
-    email: "contact@sophiemoore.com",
+    email: "info@mattcannon.com",
     progress: "60%",
     avatar: "/group-1000004603-1.png",
   },
   {
     name: "Sophie Moore",
-    email: "contact@sophiemoore.com",
+    email: "info@mattcannon.com",
     progress: "33%",
     avatar: "/group-1000004603.png",
   },
@@ -29,11 +24,11 @@ const teamMembers = [
   },
 ];
 
-export const ProductsSection = (): JSX.Element => {
+export default function ProductsSection(){
   return (
     <div className="w-full relative">
       <AnimatedCard 
-        className="w-full max-w-[318px] h-auto bg-secondary-colorscolor-1 rounded-xl shadow-general-shadow-01 border-0 hover:border hover:border-primary-colorscolor-1/20"
+        className="w-full max-w-[400px] h-[350px] bg-secondary-colorscolor-1 rounded-xl shadow-general-shadow-01 border-0"
         delay={300}
       >
         <CardContent className="p-0 relative h-full">
@@ -42,7 +37,7 @@ export const ProductsSection = (): JSX.Element => {
             Team progress
           </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -52,19 +47,7 @@ export const ProductsSection = (): JSX.Element => {
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-3">
                   <div className="relative">
-                      <Avatar className="w-8 h-8 transition-transform duration-200 group-hover/member:scale-110">
-                      <AvatarImage
-                        src={member.avatar}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                        <AvatarFallback className="w-8 h-8 text-xs">
-                        {member.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </AvatarFallback>
-                    </Avatar>
+                     <img className="h-10 w-10 rounded-full" src="/Group 39488.png" alt="" />
                       <div className="absolute -inset-px rounded-[800px] border-[1.4px] border-solid border-[#0b1739] transition-colors duration-200 group-hover/member:border-primary-colorscolor-1/30" />
                   </div>
 
@@ -74,7 +57,7 @@ export const ProductsSection = (): JSX.Element => {
                     >
                       {member.name}
                     </div>
-                      <div className="font-paragraph-small font-[number:var(--paragraph-small-font-weight)] text-neutral-colors400 text-xs tracking-[var(--paragraph-small-letter-spacing)] leading-[var(--paragraph-small-line-height)] whitespace-nowrap [font-style:var(--paragraph-small-font-style)] transition-colors duration-150 group-hover/member:text-neutral-colors300">
+                      <div className="font-paragraph-small text-[10px] font-[number:var(--paragraph-small-font-weight)] text-neutral-colors400 text-xs tracking-[var(--paragraph-small-letter-spacing)] leading-[var(--paragraph-small-line-height)] whitespace-nowrap [font-style:var(--paragraph-small-font-style)] transition-colors duration-150 group-hover/member:text-neutral-colors300">
                       {member.email}
                     </div>
                   </div>
@@ -85,11 +68,6 @@ export const ProductsSection = (): JSX.Element => {
                 </div>
                 </div>
                 
-                <ProgressBar 
-                  value={parseInt(member.progress)} 
-                  className="opacity-0 group-hover/member:opacity-100 transition-opacity duration-300"
-                  color={index === 0 ? 'success' : index === 1 ? 'secondary' : 'primary'}
-                />
               </div>
             ))}
           </div>

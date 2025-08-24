@@ -1,26 +1,27 @@
 import { ChevronDownIcon } from "lucide-react";
-import React from "react";
+import React, { JSX } from "react";
 import { Button } from "../../components/ui/button";
 import { useHover } from "../../hooks/useHover";
 import { cn } from "../../lib/utils";
-import { AnalyticsOverviewSection } from "./sections/AnalyticsOverviewSection/AnalyticsOverviewSection";
-import { ProductsSection } from "./sections/ProductsSection/ProductsSection";
-import { RevenueChartSection } from "./sections/RevenueChartSection/RevenueChartSection";
-import { SidebarSection } from "./sections/SidebarSection/SidebarSection";
-import { TeamProgressSection } from "./sections/TeamProgressSection/TeamProgressSection";
-import { WebsiteVisitorsSection } from "./sections/WebsiteVisitorsSection/WebsiteVisitorsSection";
+import AnalyticsOverviewSection from "./sections/AnalyticsOverviewSection/AnalyticsOverviewSection";
+import TeamProgressSection from "./sections/TeamProgressSection/TeamProgressSection";
+import RevenueChartSection from "./sections/RevenueChartSection/RevenueChartSection";
+import ProductsSection from "./sections/ProductsSection/ProductsSection";
+import WebsiteVisitorsSection from "./sections/WebsiteVisitorsSection/WebsiteVisitorsSection";
+import SidebarSection from "./sections/SidebarSection/SidebarSection";
+
 
 export const Dashboard = (): JSX.Element => {
   const [headerButtonRef, isHeaderButtonHovered] = useHover<HTMLButtonElement>();
 
   return (
-    <div className="bg-[#081028] min-h-screen w-full overflow-x-hidden">
+    <div className="bg-[#081028] min-h-screen w-full">
       <div className="bg-neutral-colors800 min-h-screen w-full max-w-[1440px] mx-auto relative flex">
         <SidebarSection />
 
-        <main className="flex-1 p-6 lg:ml-0 transition-all duration-300 min-w-0">
+        <main className="flex-1 p-2 md:p-6 lg:ml-0 transition-all duration-300 min-w-0">
           <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-            <h1 className="[font-family:'Work_Sans',Helvetica] font-semibold text-white text-xl tracking-[0] leading-[22px]">
+            <h1 className="[font-family:'Work_Sans',Helvetica] mt-2 md:mt-0 font-semibold text-white text-xl tracking-[0] leading-[22px]">
               Analytics
             </h1>
 
@@ -36,27 +37,29 @@ export const Dashboard = (): JSX.Element => {
               <span className="font-text-single-100-medium font-[number:var(--text-single-100-medium-font-weight)] text-[length:var(--text-single-100-medium-font-size)] tracking-[var(--text-single-100-medium-letter-spacing)] leading-[var(--text-single-100-medium-line-height)] [font-style:var(--text-single-100-medium-font-style)]">
                 May 2023
               </span>
-              <ChevronDownIcon className={cn(
-                "w-3 h-3 transition-transform duration-200",
-                isHeaderButtonHovered && "rotate-180"
-              )} />
+              <ChevronDownIcon
+                className={cn(
+                  "w-3 h-3 transition-transform duration-200",
+                  isHeaderButtonHovered && "rotate-180"
+                )}
+              />
             </Button>
           </header>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 auto-rows-fr">
-            <div className="lg:col-span-3 order-1 lg:order-1">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-6">
+            <div className="lg:col-span-4 w-full order-1 lg:order-1">
               <AnalyticsOverviewSection />
             </div>
-            <div className="lg:col-span-9 order-2 lg:order-2">
+            <div className="lg:col-span-8 order-2 lg:order-2">
               <TeamProgressSection />
             </div>
-            <div className="lg:col-span-3 order-3 lg:order-3">
+            <div className="lg:col-span-4 order-3 lg:order-3">
               <RevenueChartSection />
             </div>
-            <div className="lg:col-span-3 order-4 lg:order-4">
+            <div className="lg:col-span-4 order-4 lg:order-4">
               <ProductsSection />
             </div>
-            <div className="lg:col-span-6 order-5 lg:order-5">
+            <div className="lg:col-span-4 order-5 lg:order-5">
               <WebsiteVisitorsSection />
             </div>
           </div>

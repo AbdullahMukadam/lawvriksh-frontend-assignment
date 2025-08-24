@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent } from './card';
+import { Card } from './card';
 import { cn } from '../../lib/utils';
 import { useHover } from '../../hooks/useHover';
 import { useInView } from '../../hooks/useInView';
@@ -17,7 +17,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
   delay = 0,
   hoverScale = true,
 }) => {
-  const [hoverRef, isHovered] = useHover<HTMLDivElement>();
+  const [hoverRef, isHovered] = useHover<HTMLDivElement | null>();
   const [inViewRef, isInView] = useInView();
 
   return (
@@ -28,7 +28,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
       }}
       className={cn(
         "transition-all duration-300 ease-out",
-        "transform-gpu", // Hardware acceleration
+        "transform-gpu", 
         isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
         hoverScale && isHovered && "scale-[1.02] shadow-lg",
         className

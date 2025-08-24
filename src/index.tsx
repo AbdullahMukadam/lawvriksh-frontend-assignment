@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Dashboard } from "./screens/Dashboard/Dashboard";
+import { Dashboard } from "./pages/Dashboard/Dashboard";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>

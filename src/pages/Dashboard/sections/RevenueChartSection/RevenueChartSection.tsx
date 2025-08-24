@@ -1,4 +1,4 @@
-import React from "react";
+
 import { AnimatedCard } from "../../../../components/ui/animated-card";
 import { CardContent } from "../../../../components/ui/card";
 
@@ -15,11 +15,11 @@ const productsData = [
   },
 ];
 
-export const RevenueChartSection = (): JSX.Element => {
+export default function RevenueChartSection(){
   return (
-    <section className="w-full">
+    <section className="w-full h-[350px]">
       <AnimatedCard 
-        className="bg-secondary-colorscolor-1 rounded-xl shadow-general-shadow-01 border-0 hover:border hover:border-secondary-colorscolor-3/20"
+        className="bg-secondary-colorscolor-1 rounded-xl shadow-general-shadow-01 border-0 "
         delay={200}
       >
         <CardContent className="p-0">
@@ -29,10 +29,10 @@ export const RevenueChartSection = (): JSX.Element => {
             </h2>
 
             <div className="flex justify-between items-center mb-12">
-              <span className="font-paragraph-small text-neutral-colors100 text-[length:var(--paragraph-small-font-size)] leading-[var(--paragraph-small-line-height)] font-[number:var(--paragraph-small-font-weight)] tracking-[var(--paragraph-small-letter-spacing)] [font-style:var(--paragraph-small-font-style)]">
+              <span className="font-paragraph-small text-neutral-colors100 leading-[var(--paragraph-small-line-height)] font-[number:var(--paragraph-small-font-weight)] tracking-[var(--paragraph-small-letter-spacing)] text-[14px] [font-style:var(--paragraph-small-font-style)]">
                 Products
               </span>
-              <span className="[font-family:'Work_Sans',Helvetica] text-neutral-colors100 text-[10px] leading-[14px] font-medium tracking-[0]">
+              <span className="[font-family:'Work_Sans',Helvetica] text-neutral-colors100 text-[14px] leading-[14px] font-medium tracking-[0]">
                 Price
               </span>
             </div>

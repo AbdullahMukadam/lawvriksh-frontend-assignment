@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 
-export const useHover = <T extends HTMLElement>(): [React.RefObject<T>, boolean] => {
+export const useHover = <T extends HTMLElement | null>(): [React.RefObject<T>, boolean] => {
   const [isHovered, setIsHovered] = useState(false);
-  const ref = useRef<T>(null);
+  const ref = useRef<T | null>(null);
 
   useEffect(() => {
     const element = ref.current;
@@ -20,5 +20,5 @@ export const useHover = <T extends HTMLElement>(): [React.RefObject<T>, boolean]
     };
   }, []);
 
-  return [ref, isHovered];
+  return [ref, isHovered] as [React.RefObject<T>, boolean];
 };

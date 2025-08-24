@@ -1,12 +1,15 @@
-# Analytics Dashboard - UX Enhanced
+# Analytics Dashboard 
 
 A modern, responsive analytics dashboard built with React.js, featuring purposeful animations and UX improvements based on established design principles.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v16 or higher)
 - npm or yarn
+
+### Live Url 
+- second
 
 ### Installation & Running
 
@@ -20,10 +23,6 @@ A modern, responsive analytics dashboard built with React.js, featuring purposef
    npm run dev
    ```
 
-3. **Build for production:**
-   ```bash
-   npm run build
-   ```
 
 The application will be available at `http://localhost:5173/`
 
@@ -85,7 +84,7 @@ The application will be available at `http://localhost:5173/`
 
 ### Responsive Features
 - Flexible grid system that adapts to screen size
-- Collapsible sidebar for smaller screens
+- Collapsible sidebar
 - Stacked card layout on mobile
 - Touch-friendly interactive elements
 - Optimized typography scaling
@@ -105,7 +104,7 @@ The application will be available at `http://localhost:5173/`
 src/
 ├── components/ui/          # Reusable UI components
 ├── hooks/                  # Custom React hooks
-├── screens/Dashboard/      # Dashboard-specific components
+├── pages/Dashboard/      # Dashboard-specific components
 └── lib/                   # Utility functions
 ```
 
@@ -116,7 +115,7 @@ src/
 - **Lucide React**: Consistent icon system
 - **Custom Hooks**: Reusable logic for animations and interactions
 
-## 🎯 UX Improvements Implemented
+## UX Improvements Implemented
 
 1. **Visual Feedback**: Immediate response to user interactions
 2. **Progressive Enhancement**: Core functionality works without JavaScript
@@ -125,9 +124,8 @@ src/
 5. **Error Prevention**: Clear visual cues and intuitive interactions
 6. **Consistency**: Unified interaction patterns across components
 
-## 📊 Animation Strategy
+## Animation Strategy
 
-All animations follow the **12 Principles of Animation** adapted for UI:
 - **Timing**: 180ms for micro-interactions, 300ms for transitions
 - **Easing**: `ease-out` for natural feeling movements
 - **Staging**: Staggered animations to guide attention
