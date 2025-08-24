@@ -1,0 +1,276 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --general-shadow-01: 1px 1px 1px 0px rgba(16, 25, 52, 0.4);
+  --general-shadow-03: 0px 8px 28px 0px rgba(1, 5, 17, 0.3);
+  --neutral-colors100: rgba(255, 255, 255, 1);
+  --neutral-colors300: rgba(233, 234, 243, 1);
+  --neutral-colors400: rgba(174, 185, 225, 1);
+  --neutral-colors500: rgba(126, 137, 172, 1);
+  --neutral-colors600: rgba(11, 23, 57, 1);
+  --neutral-colors700: rgba(10, 19, 48, 1);
+  --neutral-colors800: rgba(8, 16, 40, 1);
+  --othergreen-50: rgba(5, 193, 104, 0.2);
+  --paragraph-small-font-family: "Mona-Sans", Helvetica;
+  --paragraph-small-font-size: 10px;
+  --paragraph-small-font-style: normal;
+  --paragraph-small-font-weight: 500;
+  --paragraph-small-letter-spacing: 0px;
+  --paragraph-small-line-height: 14px;
+  --primary-colorscolor-1: rgba(203, 60, 255, 1);
+  --secondary-colorscolor-1: rgba(11, 23, 57, 1);
+  --secondary-colorscolor-2: rgba(154, 145, 251, 1);
+  --secondary-colorscolor-3: rgba(0, 194, 255, 1);
+  --secondary-colorscolor-4: rgba(52, 59, 79, 1);
+  --special-headings-display-4-font-family: "Mona-Sans", Helvetica;
+  --special-headings-display-4-font-size: 24px;
+  --special-headings-display-4-font-style: normal;
+  --special-headings-display-4-font-weight: 600;
+  --special-headings-display-4-letter-spacing: 0px;
+  --special-headings-display-4-line-height: 32px;
+  --system-colorsgreen-300: rgba(20, 202, 116, 1);
+  --text-single-100-bold-font-family: "Mona-Sans", Helvetica;
+  --text-single-100-bold-font-size: 12px;
+  --text-single-100-bold-font-style: normal;
+  --text-single-100-bold-font-weight: 600;
+  --text-single-100-bold-letter-spacing: 0px;
+  --text-single-100-bold-line-height: 14px;
+  --text-single-100-medium-font-family: "Mona-Sans", Helvetica;
+  --text-single-100-medium-font-size: 12px;
+  --text-single-100-medium-font-style: normal;
+  --text-single-100-medium-font-weight: 500;
+  --text-single-100-medium-letter-spacing: 0px;
+  --text-single-100-medium-line-height: 14px;
+  --text-single-200-medium-font-family: "Mona-Sans", Helvetica;
+  --text-single-200-medium-font-size: 14px;
+  --text-single-200-medium-font-style: normal;
+  --text-single-200-medium-font-weight: 500;
+  --text-single-200-medium-letter-spacing: 0px;
+  --text-single-200-medium-line-height: 14px;
+  --text-single-300-medium-font-family: "Mona-Sans", Helvetica;
+  --text-single-300-medium-font-size: 16px;
+  --text-single-300-medium-font-style: normal;
+  --text-single-300-medium-font-weight: 500;
+  --text-single-300-medium-letter-spacing: 0px;
+  --text-single-300-medium-line-height: 18px;
+  --text-single-400-bold-font-family: "Mona-Sans", Helvetica;
+  --text-single-400-bold-font-size: 20px;
+  --text-single-400-bold-font-style: normal;
+  --text-single-400-bold-font-weight: 600;
+  --text-single-400-bold-letter-spacing: 0px;
+  --text-single-400-bold-line-height: 22px;
+  --text-single-50-medium-font-family: "Mona-Sans", Helvetica;
+  --text-single-50-medium-font-size: 10px;
+  --text-single-50-medium-font-style: normal;
+  --text-single-50-medium-font-weight: 500;
+  --text-single-50-medium-letter-spacing: 0px;
+  --text-single-50-medium-line-height: 10px;
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes slideUp {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
