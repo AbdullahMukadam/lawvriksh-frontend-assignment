@@ -5,6 +5,7 @@
 In the initial phase, we built a responsive analytics dashboard using React.js and TypeScript, focusing on foundational UX principles and responsive design. Key accomplishments include:
 
 - **Responsive Layout**: Implemented a flexible grid system with breakpoints for desktop, tablet, and mobile views
+- **Collapsible sidebar** : Developed a stateful navigation sidebar with fluid CSS transitions, allowing users to toggle between a full view and an icon-only mode to maximize content visibility
 - **Component Architecture**: Created a modular component structure with reusable UI elements
 - **Performance Optimizations**: Added lazy loading, efficient re-renders, and hardware-accelerated animations
 - **Accessibility**: Ensured keyboard navigation and proper focus management

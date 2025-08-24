@@ -15,13 +15,12 @@ import {
 import { Button } from "../../../../components/ui/button";
 import { Input } from "../../../../components/ui/input";
 
-export default function SidebarSection(){
+export default function SidebarSection() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
 
   const handleToggleCollapse = () => {
     setIsCollapsed(prev => !prev);
   };
-
 
   return (
     <>
@@ -34,7 +33,7 @@ export default function SidebarSection(){
 
       <aside
         data-sidebar
-        className={`h-screen bg-neutral-colors800 shadow-general-shadow-03 flex flex-col transition-all duration-300 ${isCollapsed ? 'w-[70px]' : 'w-[300px] sm:w-[260px] md:w-[280px]'} ${!isCollapsed ? 'fixed top-0 z-50 md:sticky md:z-auto' : 'relative md:sticky md:top-0'}`}
+        className={`h-screen bg-neutral-colors800 shadow-general-shadow-03 flex flex-col transition-all duration-300 ${isCollapsed ? 'w-[70px]' : 'w-[300px] sm:w-[260px] md:w-[280px]'} ${!isCollapsed ? 'fixed top-0 z-50 md:sticky md:z-auto' : 'sticky top-0'}`}
       >
         <img
           className="absolute w-px h-full top-0 right-0"

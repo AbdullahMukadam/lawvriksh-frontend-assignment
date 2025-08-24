@@ -9,7 +9,7 @@ A modern, responsive analytics dashboard built with React.js, featuring purposef
 - npm or yarn
 
 ### Live Url 
-- second
+- [Live demo link](https://lawvriksh-frontend.netlify.app/)
 
 ### Installation & Running
 
